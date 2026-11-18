@@ -7,6 +7,13 @@ require("dotenv").config();
 
 const app = express();
 
+const mongoose = require("mongoose");
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log("MongoDB connected successfully!"))
+    .catch((error) => console.error("MongoDB connection failed:", error));
+
 // Middleware
 app.use(cors());
 app.use(express.json());
