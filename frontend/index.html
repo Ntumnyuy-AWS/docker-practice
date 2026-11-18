@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="profile-container">
+
+        <h1>My Profile</h1>
+        <p class="subtitle">Manage your personal information</p>
+
+        <form id="profileForm">
+
+            <div class="profile-picture">
+                <img
+                    id="profilePreview"
+                    src="https://placehold.co/150x150?text=Profile"
+                    alt="Profile picture"
+                >
+
+                <label for="profileImage">Upload Profile Picture</label>
+                <input
+                    type="file"
+                    id="profileImage"
+                    accept="image/*"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="hobbies">Hobbies</label>
+                <textarea
+                    id="hobbies"
+                    placeholder="E.g. Reading, Coding, Football"
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit">Update Profile</button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
